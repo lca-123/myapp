@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/firstpage.dart';
+import 'package:myapp/calculatorapp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const SizedBox(height: 16.0),
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -66,7 +68,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: ((context) => const FirstPage()),
                       ));
                 },
-                child: const Text('go to firstpage'))
+                child: const Text('go to firstpage')),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => Calculator()),
+                      ));
+                },
+                child: const Text('go to SumCalculator'))
           ],
         ),
       ),
