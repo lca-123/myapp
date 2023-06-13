@@ -125,7 +125,8 @@ class _CalculatorState extends State<Calculator> {
                       _selectedOperation = Operation.addition;
                     });
                   },
-                  style: ElevatedButton.styleFrom(primary: additionButtonColor),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: additionButtonColor),
                   child: Text('加法'),
                 ),
                 ElevatedButton(

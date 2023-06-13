@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/firstpage.dart';
-import 'package:myapp/calculatorapp.dart';
+import 'package:myapp/newpage.dart';
+import 'package:myapp/listviewpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,7 +79,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: ((context) => Calculator()),
                       ));
                 },
-                child: const Text('go to SumCalculator'))
+                child: const Text('go to Calculator')),
+            const SizedBox(height: 16.0),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: ((context) => DynamicTextFields()),
+                      ));
+                },
+                child: const Text('go to ListView'))
           ],
         ),
       ),
